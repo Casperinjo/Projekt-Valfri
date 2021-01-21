@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <script src="./app.js"></script>
-    
+
     <title>TodoList</title>
-</head>
-<body>
-    
-        <div class="form-holder">
-            <h1>Skriv in Uppgifter</h1>
-            <div class="form">
-              <input type="text" name="User-Name" required />
-              <label for="User-Name" class="label-name">
-                <span class="content-name">Namn</span>
-              </label>
-            </div>
-           
-            
-            <div class="form">
-              <input type="email" name="email" required autocomplete="off" />
-              <label for="email" class="label-name">
-                <span class="content-name">Email</span>
-              </label>
-            </div>
-            <button class="login" onclick=" registered()">Registrera</button>
-          </div>
-   
-    
-</body>
+  </head>
+  <body>
+    <div class="form-holder">
+      <h1>Skriv in Uppgifter</h1>
+      <div class="form">
+        <input type="text" name="User-Name" required />
+        <label for="User-Name" class="label-name">
+          <span class="content-name">Namn</span>
+        </label>
+      </div>
+
+      <div class="form">
+        <input type="email" name="email" required autocomplete="off" />
+        <label for="email" class="label-name">
+          <span class="content-name">Email</span>
+        </label>
+      </div>
+      <button class="login" onclick=" Click()">Gå Vidare!</button>
+    </div>
+    <div class="todo">
+      <header>
+        <h1>Att göra lista</h1>
+      </header>
+      <form class="todo-form">
+        <input type="text" name="todo-input" />
+        <button class="todo-button" type="submit">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
+    </div>
+  </body>
 </html>

@@ -7,6 +7,7 @@ body{
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(120deg,#bdc3c7,#2c3e50);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .form-holder {
@@ -24,13 +25,13 @@ body{
   }
   
   .form {
-    height: 100%;
+    height: 50%;
     width: 100%;
     position: relative;
     left: 10px;
     top: 10px;
-    font-family: sans-serif;
     overflow: hidden;
+   
   }
   
   .form input {
@@ -39,7 +40,8 @@ body{
     background-color: rgba(255, 255, 255, 0);
     border: none;
     outline: none;
-    padding-top: 20px;
+    padding-top: 80px;
+    font-size: 24px;
   }
   
   .form label {
@@ -80,12 +82,13 @@ body{
   .form input:focus + .label-name::after,
   .form input:valid + .label-name::after {
     transform: translateX(0%);
+
   }
   
   .login {
-   width: 40%;
+   width: 30%;
    height: 20%;
-    background-color: rgb(23, 144, 201);
+    background-image:linear-gradient(90deg,#2193b0,#6dd5ed);
     position: relative;
     top: 20px;
     left: 20px;
@@ -94,5 +97,14 @@ body{
     border-radius: 50px;
   }
   .login:hover {
-    background-color: rgb(28, 118, 160);
+    background-image: linear-gradient(240deg,#6bb9ca,#1f7b92);
   }
+
+  .Invisible{
+    display: none;
+  }
+
+  
+    
+  
+  
