@@ -15,7 +15,7 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
-    <script src="./app.js"></script>
+    <script defer src="./app.js"></script>
 
     <title>TodoList</title>
   </head>
@@ -35,18 +35,21 @@
           <span class="content-name">Email</span>
         </label>
       </div>
-      <button class="login" onclick=" Click()">Gå Vidare!</button>
+      <button class="login" onclick=" click()">Gå Vidare!</button>
     </div>
     <div class="todo">
       <header>
         <h1>Att göra lista</h1>
       </header>
       <form class="todo-form">
-        <input type="text" name="todo-input" />
-        <button class="todo-button" type="submit">
+        <input type="text" name="todo-input" class="todo-input"/>
+        <button class="todo-button" type="submit" onclick="addTodo()" >
           <i class="fas fa-plus"></i>
         </button>
       </form>
+      <div>
+        <ul class="todo-list"></ul>
+      </div>
     </div>
   </body>
 </html>

@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    display: none;
   }
   
   .form {
@@ -103,8 +103,93 @@ body{
   .Invisible{
     display: none;
   }
+  .todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem;
+  }
+  .todo-form{
+    margin-top: 20% ;
 
-  
+  }  
+  .todo-input{
+    outline: none;
+    width: 20rem;
+    height: 40px;
+  }
+  .todo-button{
+    height: 40px;
+    width: 40px;
+    outline: none;
     
+  }
+  .todo-button:hover{
+    background-color: rgb(23, 144, 201) ;
+    border: none;
+  }  
+    
+ .todo-list{
+   list-style:none;
+   min-width: 30%;
+   
+   
+ }
+
+  .todo-thing{
+    margin: 0.5rem;
+    padding-left: 1rem ;
+    background: white;
+    color: black;
+    font: 1.5rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20em;
+    height: 40px;
+    
+  }
+   .todo-item{
+     flex:1;
+   }
+  
+ 
   
   
+  .complete-btn{
+   outline: none;
+   border: none;
+   color: white;
+   background-color: rgb(23, 144, 201) ;
+   height: 40px;
+   width: 40px;
+
+   
+  }
+  .trash-btn{
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    color:white;
+    background-color: rgb(23, 144, 201) ;
+    height: 40px;
+    width: 40px;
+  }
+
+  .complete-btn:hover{
+    background-color: rgb(16, 209, 16);
+    color: black;
+  }
+  .trash-btn:hover{
+    background-color: rgb(255, 0, 0);
+    color: black;
+  }
+    
+  .fa-trash, .fa-check{
+    pointer-events: none;
+  }
+  
+  .completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
