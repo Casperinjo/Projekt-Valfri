@@ -1,195 +1,231 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(120deg,#bdc3c7,#2c3e50);
-    font-family: 'Open Sans', sans-serif;
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body {
+  
+  background-image: linear-gradient(120deg, #bdc3c7, #2c3e50);
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
 }
 
 .form-holder {
-    position: absolute;
-    bottom: 50%;
-    left: 40%;
-    height: 40%;
-    width: 20%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
-  
-  .form {
-    height: 50%;
-    width: 100%;
-    position: relative;
-    left: 10px;
-    top: 10px;
-    overflow: hidden;
-   
-  }
-  
-  .form input {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    outline: none;
-    padding-top: 80px;
-    font-size: 24px;
-  }
-  
-  .form label {
-    position: absolute;
-    bottom: 0px;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid black;
-  }
-  
-  .form label::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0%;
-    bottom: -1px;
-    border-bottom: 3px solid rgb(23, 144, 201);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-  .content-name {
-    position: absolute;
-    bottom: 5px;
-    left: 0px;
-    transition: all 0.3s ease;
-  }
-  
-  .form input:focus + .label-name .content-name,
-  .form input:valid + .label-name .content-name {
-    transform: translateY(-150%);
-    color: rgb(23, 144, 201);
-    font-size: 14px;
-  }
-  
-  .form input:focus + .label-name::after,
-  .form input:valid + .label-name::after {
-    transform: translateX(0%);
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  height: 40%;
+  width: 20%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-  
-  .login {
-   width: 30%;
-   height: 20%;
-    background-image:linear-gradient(90deg,#2193b0,#6dd5ed);
-    position: relative;
-    top: 20px;
-    left: 20px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-  }
-  .login:hover {
-    background-image: linear-gradient(240deg,#6bb9ca,#1f7b92);
-  }
+.form {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  overflow: hidden;
+}
 
-  .Invisible{
-    display: none;
-  }
-  .todo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4rem;
-  }
-  .todo-form{
-    margin-top: 20% ;
+.form input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  padding-top: 8rem;
+  font-size: 24px;
+}
 
-  }  
-  .todo-input{
-    outline: none;
-    width: 20rem;
-    height: 40px;
-  }
-  .todo-button{
-    height: 40px;
-    width: 40px;
-    outline: none;
-    
-  }
-  .todo-button:hover{
-    background-color: rgb(23, 144, 201) ;
-    border: none;
-  }  
-    
- .todo-list{
-   list-style:none;
-   min-width: 30%;
-   
-   
- }
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  padding-top: 2rem;
+}
 
-  .todo-thing{
-    margin: 0.5rem;
-    padding-left: 1rem ;
-    background: white;
-    color: black;
-    font: 1.5rem ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 20em;
-    height: 40px;
-    
-  }
-   .todo-item{
-     flex:1;
-   }
-  
- 
-  
-  
-  .complete-btn{
-   outline: none;
-   border: none;
-   color: white;
-   background-color: rgb(23, 144, 201) ;
-   height: 40px;
-   width: 40px;
+.form label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  bottom: -1px;
+  border-bottom: 3px solid rgb(23, 144, 201);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
 
-   
-  }
-  .trash-btn{
-    padding: 0.5rem;
-    outline: none;
-    border: none;
-    color:white;
-    background-color: rgb(23, 144, 201) ;
-    height: 40px;
-    width: 40px;
-  }
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  color: rgb(23, 144, 201);
+  font-size: 14px;
+}
 
-  .complete-btn:hover{
-    background-color: rgb(16, 209, 16);
-    color: black;
-  }
-  .trash-btn:hover{
-    background-color: rgb(255, 0, 0);
-    color: black;
-  }
-    
-  .fa-trash, .fa-check{
-    pointer-events: none;
-  }
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.login {
+  width: 40%;
+  height: 10%;
+  background-image: linear-gradient(90deg, #2193b0, #6dd5ed);
+  position: relative;
+  top: 20px;
+  left: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}
+.login:hover {
+  background-image: linear-gradient(240deg, #6bb9ca, #1f7b92);
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+.Invisible {
+  display: none;
+}
+.todo-form {
+  margin-top: 20%;
+}
+.todo-input {
+  outline: none;
+  width: 20rem;
+  height: 40px;
+}
+
+.todo-button {
+  height: 40px;
+  width: 40px;
+  outline: none;
+}
+
+
+.todo-button:hover {
+  background-color: rgb(23, 144, 201);
+  border: none;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 30%;
+}
+
+.todo-thing {
+  margin: 0.5rem;
+  padding-left: 1rem;
+  background: white;
+  color: black;
+  font: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+  height: 40px;
+  transition: all 1s ease;
+}
+.todo-item {
+  flex: 1;
+}
+
+.complete-btn {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgb(23, 144, 201);
+  height: 40px;
+  width: 40px;
+}
+.trash-btn {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgb(23, 144, 201);
+  height: 40px;
+  width: 40px;
+}
+
+.complete-btn:hover {
+  background-color: rgb(16, 209, 16);
+  color: black;
+}
+.trash-btn:hover {
+  background-color: rgb(255, 0, 0);
+  color: black;
+}
+
+.fa-trash,
+.fa-check,
+fa-arrow-circle-left {
+  pointer-events: none;
+}
+
+.completed {
+  background-color: green;
+  opacity: 0;
+  transform: translateX(400px);
+}
+
+.trash {
+  background-color: red;
+  opacity: 0;
+  transform: translateX(400px);
+}
+
+
+.nav-slide-button{
+  position: absolute;
+  bottom: 50%;
+  transform: translateX(55rem);
+  transition: transform 1s ease-out;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+.side-bar{
+  width: 20%;
+  height: 100%;
+  position:absolute;
+  top: 0%;
+  transform: translateX(120rem);
+  transition: transform 1s ease-out;
+  background-color: rgb(23, 144, 201);
   
-  .completed{
-    text-decoration: line-through;
-    opacity: 0.5;
-  }
+}
+
+.sidebar-slide{
+  transform: translateX(100rem);
+  
+}
+.button-slide{
+  transform: translateX(35rem);
+}

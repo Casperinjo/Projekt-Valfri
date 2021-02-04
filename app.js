@@ -1,13 +1,27 @@
+const formInput  = document.querySelector(".form-input");
+const sideBar = document.querySelector(".side-bar");
+const formButton = document.querySelector(".login");
+const formHolder = document.querySelector(".form-holder");
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
+const slideButton = document.querySelector(".nav-slide-button")
+document.querySelector(".todo").classList.add("Invisible");
 
-function click() {
-  document.querySelector(".form-holder").classList.add("Invisible");
-};
+//Evenlisteners
+formButton.addEventListener("click", function(){
+  formHolder.classList.add("Invisible");
+  document.querySelector(".todo").classList.toggle("Invisible");
+  
+} );
+todoList.addEventListener("click", deleteComplete);
+slideButton.addEventListener("click", slider);
 
-todoList.addEventListener('click', deleteCheck);
+//Transition to todo list
 
+
+
+//adding of todolists
 function addTodo() {
   event.preventDefault();
   //Todo Div
@@ -16,7 +30,7 @@ function addTodo() {
   //Create li
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
-  newTodo.classList.add("todo-item")
+  newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   //Avklarad Knapp
   const completedButton = document.createElement("button");
@@ -24,19 +38,40 @@ function addTodo() {
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
   //Skräp Knapp
-  const  trashButton = document.createElement("button");
+  const trashButton = document.createElement("button");
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
   //Append til resten
   todoList.appendChild(todoDiv);
-};
-function deleteCheck (){
-  const item  = e.target;
-  if(item.classList[0] === 'trash-btn'){
-    const todo = item.parentElement;
-    todo.
-    todo.classList("completed");
+  todoInput.value = "";
+}
+
+function deleteComplete(e) {
+  const target = e.target;
+  if (target.classList[0] === "trash-btn") {
+    const todoDiv = target.parentElement;
+    todoDiv.classList.add("trash");
+    todoDiv.addEventListener("transitionend", function () {
+      todoDiv.remove();
+    });
   }
-};
+  if (target.classList[0] === "complete-btn") {
+    const todoDiv = target.parentElement;
+    todoDiv.classList.toggle("completed");
+    todoDiv.addEventListener("transitionend", completeTodo);
+    function completeTodo() {
+      sideBar.appendChild(todoDiv);
+      todoDiv.classList.toggle("completed");
+    }
+    
+  }
+}
+  
+function slider(){
+  sideBar.classList.toggle("sidebar-slide");
+  slideButton.classList.toggle("button-slide");
+
+}
+
 
