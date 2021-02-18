@@ -1,3 +1,4 @@
+//Variablar
 const formInput  = document.querySelector(".form-input");
 const sideBar = document.querySelector(".side-bar");
 const formButton = document.querySelector(".login");
@@ -5,13 +6,26 @@ const formHolder = document.querySelector(".form-holder");
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
-const slideButton = document.querySelector(".nav-slide-button")
-document.querySelector(".todo").classList.add("Invisible");
+const slideButton = document.querySelector(".nav-slide-button");
+
+
+
 
 //Evenlisteners
+
+//Login and todo transition
 formButton.addEventListener("click", function(){
-  formHolder.classList.add("Invisible");
-  document.querySelector(".todo").classList.toggle("Invisible");
+  formHolder.classList.add("form-slider")
+  document.querySelector(".todo").classList.add("invisible")
+  formHolder.addEventListener("transitionend", formSlide);
+  function formSlide(){
+    
+    formHolder.classList.add("login-Invisible");
+  };
+
+  
+  
+  
   
 } );
 todoList.addEventListener("click", deleteComplete);
@@ -45,8 +59,9 @@ function addTodo() {
   //Append til resten
   todoList.appendChild(todoDiv);
   todoInput.value = "";
-}
+};
 
+//Ta bort div 
 function deleteComplete(e) {
   const target = e.target;
   if (target.classList[0] === "trash-btn") {
@@ -63,15 +78,17 @@ function deleteComplete(e) {
     function completeTodo() {
       sideBar.appendChild(todoDiv);
       todoDiv.classList.toggle("completed");
-    }
+      
+      
+    };
     
-  }
-}
-  
+  };
+};
+  //Ta fram slidern
 function slider(){
   sideBar.classList.toggle("sidebar-slide");
   slideButton.classList.toggle("button-slide");
 
-}
+};
 
 
